@@ -1,14 +1,14 @@
 # Project_4_grp_2
 
 ## Table of contents ##
-[Introduction]{#Introduction}
-[Project Objective]{#Project Objective}
-[Tools]{#Tools}
-[Datasets and Inputs]{Datasets and Inputs}
+- [Introduction](#Introduction)
+- [Project Objective](#Project Objective)
+- [Tools]{#Tools}
+- [Datasets and Inputs](Datasets and Inputs)
     + Data collection
     + Data cleaning
     + Data Visualization
-[Outcome/Results]{#Outcome/Results}
+- [Outcome/Results](#Outcome/Results)
 
 ## Introduction 
 
