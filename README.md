@@ -11,6 +11,8 @@
 
 ## Introduction 
 
+According to the CDC, in 2020, 1 in 6 deaths resulted from cardiovascular disease due to stroke. In addition, according to CDC, stroke is the 5th leading cause of death in the US. This dataset predicts whether an individual will be prone to suffer from a stroke based on the input parameters like age, residence type, gender, hypertension, cardiovascular diseases, marital status, working sector, and smoking status. The dataset provides relevant information about each individual. 
+
 ## Objective
 
 ## Tools
