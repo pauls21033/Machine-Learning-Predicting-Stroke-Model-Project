@@ -5,7 +5,7 @@
 
 - [Project Objective](#Project Objective)
 - [Tools](#Tools)
-- [Datasets and Inputs](Datasets and Inputs)
+- [Datasets and Inputs](#Datasets and Inputs)
     + Data collection
     + Data cleaning
     + Data Visualization
