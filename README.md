@@ -3,7 +3,7 @@
 ## Table of contents ##
 - [Introduction](#Introduction)
 
-- [Project Objective](#Project Objective)
+- [Project Objective](#[Project Objective](https://github.com/pauls21033/Project_4_grp_2/blob/main/README.md#project-objective))
 - [Tools](#Tools)
 - [Datasets and Inputs](#Datasets and Inputs)
     + Data collection
