@@ -5,9 +5,6 @@
 - [Objective](#Objective)
 - [Tools](#Tools)
 - [Datasets and Inputs](#Datasets/Inputs)
-    + [Data collection](#Data Collection)
-    + [Data cleaning](#Data cleaning)
-    + [Data Visualization](#Data Visualization)
 - [Outcome/Results](#Outcome/Results)
 
 ## Introduction 
