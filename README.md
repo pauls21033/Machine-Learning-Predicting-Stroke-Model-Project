@@ -2,9 +2,9 @@
 
 ## Table of contents ##
 - [Introduction](#Introduction)
-- [Project Objective](#Project Objective)https://github.com/pauls21033/Project_4_grp_2/blob/main/README.md#project-objective
+- [Objective](#Objective)
 - [Tools](#Tools)
-- [Datasets and Inputs](#Datasets and Inputs)
+- [Datasets and Inputs](#Datasets/Inputs)
     + Data collection
     + Data cleaning
     + Data Visualization
@@ -12,14 +12,14 @@
 
 ## Introduction 
 
-## Project Objective
+## Objective
 
 ## Tools
 + Sql
 + Google Collab/AWS 
 + Juypter Notebook
 
-## Datasets and Inputs 
+## Datasets/Inputs 
 - Data Collection
 - Data cleaning
 - Data Visualization
