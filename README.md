@@ -1,4 +1,4 @@
-# Machine Larning Predicting Stroke Model
+# Machine Larning Predicting Stroke Model Project
 
 <img src="https://www.mydr.com.au/wp-content/uploads/2020/02/AdobeStock_208796922.jpg" width=65% height=100%>
 
