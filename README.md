@@ -19,6 +19,7 @@ This project is an exploratory test from the position of data analytics, in whic
 ## Tools
 + Sql
 + Google Collab/AWS 
++ Tableau
 + Juypter Notebook
 
 ## Datasets/Inputs 
