@@ -1,6 +1,6 @@
 # Project_4_grp_2
 
-<img src="https://www.sharp.com/health-news/images/Stroke-prevention-HN1410-iStock-1249957366-Cover-Sized.jpg" width=55% length=175%>
+<img src="https://www.sharp.com/health-news/images/Stroke-prevention-HN1410-iStock-1249957366-Cover-Sized.jpg" width=65% height=100%>
 
 ## Table of contents ##
 - [Introduction](#Introduction)
