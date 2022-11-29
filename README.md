@@ -1,6 +1,6 @@
 # Project_4_grp_2
 
-<img src="https://www.sharp.com/health-news/images/Stroke-prevention-HN1410-iStock-1249957366-Cover-Sized.jpg](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mydr.com.au%2Fnews%2Fwhat-are-your-total-lifetime-chances-of-having-a-stroke%2F&psig=AOvVaw3ZdhM5nadz1bw7iXHbRuZz&ust=1669771248190000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOjf3-Kc0vsCFQAAAAAdAAAAABAT" width=65% height=100%>
+<img src="https://www.mydr.com.au/wp-content/uploads/2020/02/AdobeStock_208796922.jpg" width=65% height=100%>
 
 ## Table of contents ##
 - [Introduction](#Introduction)
