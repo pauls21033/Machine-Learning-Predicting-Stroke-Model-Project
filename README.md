@@ -15,10 +15,10 @@ According to the CDC, in 2020, 1 in 6 deaths resulted from cardiovascular diseas
 
 ## Objective
 
-Many stroke risk indicators are manageable, making the prognosis for stroke victims hopeful for reducing the likelihood of suffering by taking the needed actions and receiving treatment earlier. This project explores the problem of predicting stroke in an individual by examining possible stroke indicators through data & analytics and machine learning. This project uses machine learning to create a model capable of predicting Stroke results based on a dataset containing individual datapoints.  
+Many stroke risk indicators are manageable, making the prognosis for stroke victims hopeful for reducing the likelihood of suffering by taking the needed actions and receiving treatment earlier. This project explores the problem of predicting stroke risk indicators severity in an individual by examining possible stroke indicators through data & analytics and machine learning. This project uses machine learning to create a model capable of predicting Stroke results based on a dataset containing individual datapoints.  
 
 ## Methods
-
+ Machine learning modeling to predict stroke severity risk indicators in patients using the K-Nearest Neighbors Classifier algorithm. This algorithm works based on existing features and similarities between these features to classify targets. 
 
 ## Tools
 + SQL
