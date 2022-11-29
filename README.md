@@ -11,10 +11,11 @@
 
 ## Introduction 
 
-According to the CDC, in 2020, 1 in 6 deaths resulted from cardiovascular disease due to stroke. In addition, according to CDC, stroke is the 5th leading cause of death in the US. This dataset predicts whether an individual will be prone to suffer from a stroke contingent upon the input parameters like age, residence type, gender, hypertension, cardiovascular diseases, marital status, working sector, and smoking status. The dataset provides relevant information about each individual. 
+According to the CDC, in 2020, 1 in 6 deaths resulted from cardiovascular disease due to Stroke. In addition, according to CDC, Stroke is the 5th leading cause of death in the US. This dataset predicts whether an individual will be prone to suffer from a stroke contingent upon the input parameters like age, residence type, gender, hypertension, cardiovascular diseases, marital status, working sector, and smoking status. The dataset provides relevant details about each individual. 
 
 ## Objective
-This project is an exploratory test from the position of data analytics, in which the problem of predicting stroke in an individual is examined through machine learning. This project will consist of several steps of typical data science testing models. 
+
+Many of Stroke´s risk indicators can be managed, making stroke prognosis hopeful of reducing the likelihood of suffering by taking the needed actions and treating people earlier. This project is an exploratory for the position of data analytics, in which the problem of predicting Stroke in an individual is examined through data & analytics and machine learning. This project uses Machine Learning to create a  model capable of predicting Stroke results based on a dataset containing individual features and information.  
 
 ## Tools
 + Sql
