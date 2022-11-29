@@ -17,6 +17,9 @@ According to the CDC, in 2020, 1 in 6 deaths resulted from cardiovascular diseas
 
 Many stroke risk indicators are manageable, making the prognosis for stroke victims hopeful for reducing the likelihood of suffering by taking the needed actions and receiving treatment earlier. This project explores the problem of predicting stroke in an individual by examining possible stroke indicators through data & analytics and machine learning. This project uses machine learning to create a model capable of predicting Stroke results based on a dataset containing individual datapoints.  
 
+## Methods
+
+
 ## Tools
 + SQL
 + Google Collab/AWS 
