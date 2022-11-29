@@ -1,6 +1,6 @@
 # Project_4_grp_2
 
-<img src="https://user-images.githubusercontent.com/107385310/204402113-c9089e9f-7e60-428f-b14a-9153cf9e77a7.png" width=150% height=50%>
+<img src="https://user-images.githubusercontent.com/107385310/204402113-c9089e9f-7e60-428f-b14a-9153cf9e77a7.png" width=100% height=50%>
 
 ## Table of contents ##
 - [Introduction](#Introduction)
