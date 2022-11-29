@@ -2,6 +2,12 @@
 
 <img src="https://www.mydr.com.au/wp-content/uploads/2020/02/AdobeStock_208796922.jpg" width=65% height=100%>
 
+## Contributors:
+- Paul Serna
+- Austin Calvo
+- Sierra Quevedo
+- Paul Schnase
+
 ## Table of contents ##
 - [Introduction](#Introduction)
 - [Objective](#Objective)
