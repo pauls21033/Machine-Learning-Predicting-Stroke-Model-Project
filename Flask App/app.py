@@ -21,6 +21,7 @@ Base.prepare(engine, reflect=True)
 stroke_db = Base.classes.stroke_df
 
 app = Flask(__name__)
+model = pickle.load(open('ML_Test.pkl', 'rb')) 
 
 @app.route("/")
 def hello_world():
