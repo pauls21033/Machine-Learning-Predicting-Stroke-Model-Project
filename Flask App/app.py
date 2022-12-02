@@ -12,13 +12,13 @@ basedir = os.path.abspath(os.path.dirname(__file__))
  #   os.path.join(basedir, '..Resources/stroke_analysis.sqlite'))
 #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Init db
-engine = create_engine("sqlite:///Resources/stroke_df.sqlite")
+engine = create_engine("sqlite:///stroke_analysis.sqlite", echo=True)
 Base = automap_base()
 
 #reflect the tables
 Base.prepare(engine, reflect=True)
 
-stroke_db = Base.classes.stroke_df
+stroke_db = Base.classes.stroke_analysis
 
 app = Flask(__name__)
 model = pickle.load(open('ML_Test.pkl', 'rb')) 
