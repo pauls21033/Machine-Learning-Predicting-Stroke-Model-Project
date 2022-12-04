@@ -24,9 +24,31 @@ stroke_db = Base.classes.stroke_analysis
 app = Flask(__name__)
 model = pickle.load(open('ML_Test.pkl', 'rb')) 
 
-@app.route("/")
+@app.route("/index.html")
 def home():
     return render_template('index.html')
+
+@app.route("/data.html")
+def data():
+    return render_template('data.html')
+
+@app.route('/prediction.html',methods=['POST'])
+def predict():
+    Age = int(request.form["Age"])
+    Gender = request.form["Gender"]
+    gender_dict = {'Male': 0, 'Female': 1}
+    Gender_int = Gender.replace({'gender': gender_dict})
+    Blood_Pressure = int(request.form["Blood Pressure"])
+    Glucose = int(request.form["Glucose"])
+    #Smoking = request.form["Smoking"]
+    #Smoking_dict = {'No': 0, 'Former': 1, 'Current': 2}
+    #Smoking_int = Smoking.replace{'Smoking': Smoking_dict}
+        
+    #prediction = model.predict([[rooms, distance]]) 
+    #output = round(prediction[0], 2) 
+
+    return render_template('prediction.html', prediction_text=f'{Age}, {Gender_int}, {Blood_Pressure}, {Glucose}')    
+    #return render_template('predict.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
