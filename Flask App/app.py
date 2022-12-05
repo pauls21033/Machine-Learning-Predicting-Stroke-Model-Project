@@ -34,20 +34,18 @@ def data():
 
 @app.route('/prediction.html',methods=['POST'])
 def predict():
-    Age = int(request.form["Age"])
-    Gender = request.form["Gender"]
-    gender_dict = {'Male': 0, 'Female': 1}
-    Gender_int = Gender.replace({'gender': gender_dict})
-    Blood_Pressure = int(request.form["Blood Pressure"])
-    Glucose = int(request.form["Glucose"])
-    #Smoking = request.form["Smoking"]
-    #Smoking_dict = {'No': 0, 'Former': 1, 'Current': 2}
-    #Smoking_int = Smoking.replace{'Smoking': Smoking_dict}
+    age = int(request.form["Age"])
+    gender = int(request.form["Gender"])
+    blood_pressure = int(request.form["Blood Pressure"])
+    glucose = int(request.form["Glucose"])
+    smoking = int(request.form["Smoking"])
+    bmi = int(request.form["BMI"])
+    cholesterol = int(request.form["Cholesterol"])
         
-    #prediction = model.predict([[rooms, distance]]) 
-    #output = round(prediction[0], 2) 
+    prediction = model.predict([[age, gender, blood_pressure, glucose, smoking, bmi, cholesterol]]) 
+    output = round(prediction[0], 2) 
 
-    return render_template('prediction.html', prediction_text=f'{Age}, {Gender_int}, {Blood_Pressure}, {Glucose}')    
+    return render_template('prediction.html', prediction_text=f'{age}, {gender}, {blood_pressure}, {glucose} , {smoking}, {bmi}, {cholesterol} : {output}')    
     #return render_template('predict.html')
 
 if __name__ == "__main__":
