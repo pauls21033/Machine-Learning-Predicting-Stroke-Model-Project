@@ -57,8 +57,8 @@ def result():
     d_blood_pressure = data.get('Dia blood pressure')
     glucose = data.get('glucose')
     smoking = data.get('Smoking')
-    bmi = data.get('BMI')
-    cholesterol = data.get("Cholesterol")
+    bmi = data.get('bmi')
+    cholesterol = data.get("cholesterol")
     survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
     #prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     #output = round(prediction[0], 2) 
