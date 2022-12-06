@@ -63,25 +63,22 @@ def result():
     #prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     #output = round(prediction[0], 2) 
     return jsonify(survey)
-    
 
-@app.route('/api',methods=['POST'])
+@app.route('/api/prediction',methods=['POST'])
 def prediction():
-    # Get the data from the POST request.
-    data = request.get_json(force=True)
-    # Make prediction using model loaded from disk as per the data.
-    prediction = model.prediction([[np.array(data['age'])]])
-    # Take the first value of prediction
+    age = request.form('age')
+    gender = request.form('Gender')
+    s_blood_pressure = request.form('Sys blood pressure')
+    d_blood_pressure = request.form('Dia blood pressure')
+    glucose = request.form('glucose')
+    smoking = request.form('Smoking')
+    bmi = request.form('BMI')
+    cholesterol = request.form("Cholesterol")
+    prediction = model.predict([[age, gender, s_blood_pressure, d_blood_pressure, glucose, smoking, bmi, cholesterol]])
     output = prediction[0]
     return jsonify(output)
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
 
-import requests
-url = 'http://127.0.0.1:5000/api/predict'
-
-r= requests.post(url,json={'age'})
-print(r.json())
+    return render_template('result.html', prediction_text=f'You are at risk for a level {output} stroke')
 
 if __name__ == "__main__":
     app.run(debug=True)
