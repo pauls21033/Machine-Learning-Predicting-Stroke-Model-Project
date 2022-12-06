@@ -57,13 +57,31 @@ def result():
     d_blood_pressure = data.get('Dia blood pressure')
     glucose = data.get('glucose')
     smoking = data.get('Smoking')
-    bmi = data.get('bmi')
-    cholesterol = data.get("cholesterol")
+    bmi = data.get('BMI')
+    cholesterol = data.get("Cholesterol")
     survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
     #prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     #output = round(prediction[0], 2) 
     return jsonify(survey)
     
+
+@app.route('/api',methods=['POST'])
+def prediction():
+    # Get the data from the POST request.
+    data = request.get_json(force=True)
+    # Make prediction using model loaded from disk as per the data.
+    prediction = model.prediction([[np.array(data['age'])]])
+    # Take the first value of prediction
+    output = prediction[0]
+    return jsonify(output)
+if __name__ == '__main__':
+    app.run(port=5000, debug=True)
+
+import requests
+url = 'http://127.0.0.1:5000/api/predict'
+
+r= requests.post(url,json={'age'})
+print(r.json())
 
 if __name__ == "__main__":
     app.run(debug=True)
