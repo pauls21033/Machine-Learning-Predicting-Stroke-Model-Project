@@ -27,8 +27,24 @@ def data():
 
 
 #,methods=['POST']
-@app.route('/prediction',methods=['GET', 'POST'])
+@app.route('/prediction',methods=['GET'])
 def predict():
+    #age = int(request.form["age"])
+    #gender = int(request.form["Gender"])
+    #s_blood_pressure = int(request.form["Sys blood pressure"])
+    #d_blood_pressure = int(request.form["Dia blood pressure"])
+    #glucose = int(request.form["glucose"])
+    #smoking = int(request.form["Smoking"])
+    #bmi = int(request.form["bmi"])
+    #cholesterol = int(request.form["cholesterol"])
+        
+    #prediction = model.predict([[age, gender, s_blood_pressure, d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
+    #output = round(prediction[0], 2) 
+
+    return render_template('prediction.html')  
+
+@app.route("/result", methods =['POST'])  
+def result():
     age = int(request.form["age"])
     gender = int(request.form["Gender"])
     s_blood_pressure = int(request.form["Sys blood pressure"])
@@ -37,17 +53,9 @@ def predict():
     smoking = int(request.form["Smoking"])
     bmi = int(request.form["bmi"])
     cholesterol = int(request.form["cholesterol"])
-        
-    prediction = model.predict([[age, gender, s_blood_pressure, d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
-    output = round(prediction[0], 2) 
-
-    return render_template('prediction.html', prediction_text=f'{output}')  
-
-#@app.route("/result")  
-#def result():
- #   prediction = model.predict([[age, gender, blood_pressure, glucose, smoking, bmi, cholesterol]]) 
-  #  output = round(prediction[0], 2) 
-   # return render_template('result.html', prediction_text= f'{output}')
+    #prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
+    #output = round(prediction[0], 2) 
+    return render_template('result.html', prediction_text= f'{age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol}')
     
 
 if __name__ == "__main__":
