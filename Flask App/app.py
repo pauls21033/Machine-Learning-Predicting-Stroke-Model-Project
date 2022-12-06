@@ -27,17 +27,18 @@ def data():
 
 
 #,methods=['POST']
-@app.route('/prediction',methods=['POST'])
+@app.route('/prediction',methods=['GET', 'POST'])
 def predict():
-    age = int(request.form["Age"])
+    age = int(request.form["age"])
     gender = int(request.form["Gender"])
-    blood_pressure = int(request.form["Blood Pressure"])
-    glucose = int(request.form["Glucose"])
+    s_blood_pressure = int(request.form["Sys blood pressure"])
+    d_blood_pressure = int(request.form["Dia blood pressure"])
+    glucose = int(request.form["glucose"])
     smoking = int(request.form["Smoking"])
-    bmi = int(request.form["BMI"])
-    cholesterol = int(request.form["Cholesterol"])
+    bmi = int(request.form["bmi"])
+    cholesterol = int(request.form["cholesterol"])
         
-    prediction = model.predict([[age, gender, blood_pressure, glucose, smoking, bmi, cholesterol]]) 
+    prediction = model.predict([[age, gender, s_blood_pressure, d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     output = round(prediction[0], 2) 
 
     return render_template('prediction.html', prediction_text=f'{output}')  
