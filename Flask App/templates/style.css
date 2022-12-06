@@ -1,0 +1,47 @@
+
+.navbar {
+    font-size: 20px;
+    max-height: 50px;
+  }
+  
+  .navigation .navbar-brand {
+    margin-left: 0px;
+    padding: inherit;
+    font-weight: bold;
+    font-family: cochin;
+    
+  }
+
+  .navbar-collapse{
+    float:right;
+  }
+
+
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+@media(max-width: 992px) {
+
+    .navbar {
+      max-height: none;
+      padding: inherit;
+    }
+    .navbar div {
+      margin: inherit;
+
+    }
+    .navbar-brand {
+      padding: 10px;
+    }
+    button{
+      margin-right: 30px;
+
+    }
+    button:focus {
+      outline: 1px dotted;
+      outline: auto 5px;
+    }
+}

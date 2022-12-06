@@ -9,41 +9,42 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!--<link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
 
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/">HOME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Purpose</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/prediction">Prediction</a>
           </li>
           <div class = "collapse navbar-collapse" id="navbarNavDropdown">
             <ul class = "navbar-nav ml-auto">
-                <li class = "nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Contributors
-                  </a>
-                  <div class = "dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class = "dropdown-item" href = "https://github.com/austindcalvo/">Austin Calvo</a>
-                    <a class = "dropdown-item" href = "https://github.com/SLQuevedo">Sierra Quevedo</a>
-                    <a class = "dropdown-item" href = "https://github.com/pschnase314">Paul Schnase</a>
-                    <a class = "dropdown-item" href = "https://github.com/pauls21033">Paul Serna</a>
-                  </div>
-                </li>
+                
           <li class="nav-item">
             <a class="nav-link disabled">Model</a>
           </li>
           <li class = "nav-item">
             <a class="nav-link" href="/data"> Data</a>
+          </li>
+          <li class = "nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contributors
+            </a>
+            <div class = "dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class = "dropdown-item" href = "https://github.com/austindcalvo/">Austin Calvo</a>
+              <a class = "dropdown-item" href = "https://github.com/SLQuevedo">Sierra Quevedo</a>
+              <a class = "dropdown-item" href = "https://github.com/pschnase314">Paul Schnase</a>
+              <a class = "dropdown-item" href = "https://github.com/pauls21033">Paul Serna</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -53,6 +54,37 @@
 </head>
   
 <body>
+  <div class = "container">
+    <div class="row">
+        <div class="col-lg-7 col-md-12">
+            <div class="box" style = "padding-bottom: 20px;">
+                <h3> PURPOSE </h3>
+                <hr>
+                <p> Ischemic and Intracerebral Hemorrhagic Strokes are the fifth leading cause of death in the US, with more than 160,000 people in the US dying of this cardiovascular disease every year. Utilizing patient biometric data, this tool applies Machine Learning techniques to identify, classify, and predict stroke. Medical Professionals can use this tool to predict the severity of a stroke based on the patient’s:
+                  <ul>
+                    <li>Age</li>
+                    <li>Sex</li>
+                    <li>Blood Pressure</li>
+                    <li>Glucose Level</li>
+                    <li>History of Smoking</li>
+                    <li>BMI</li>
+                    <li>Cholesterol</li>
+                  </ul>
+                  Using these indicators, this Neural Network model can predict with 90.8% accuracy what severity level of stroke a patient is at risk for.
+                  
+                </p>
+                <br>
+                <h3>DISCLAIMER</h3>
+                <p> The Site Does Not Provide Medical Advice.
+                  <br>
+                  The contents of this site, such as text, graphics, images and other materials contained on this site (collectively, “Content”) are for informational purposes only. The Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of the information on this site. If you think you may have a medical emergency, call your doctor or 911 immediately.
+                  
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </body>
