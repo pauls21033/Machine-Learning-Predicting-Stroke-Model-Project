@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy import create_engine
 import os
@@ -27,7 +27,7 @@ def data():
 
 
 #,methods=['POST']
-@app.route('/prediction',methods=['GET'])
+@app.route('/prediction')
 def predict():
     #age = int(request.form["age"])
     #gender = int(request.form["Gender"])
@@ -43,19 +43,26 @@ def predict():
 
     return render_template('prediction.html')  
 
-@app.route("/result", methods =['POST'])  
+@app.route("/api/predict", methods=['GET','POST'])  
 def result():
-    age = int(request.form["age"])
-    gender = int(request.form["Gender"])
-    s_blood_pressure = int(request.form["Sys blood pressure"])
-    d_blood_pressure = int(request.form["Dia blood pressure"])
-    glucose = int(request.form["glucose"])
-    smoking = int(request.form["Smoking"])
-    bmi = int(request.form["bmi"])
-    cholesterol = int(request.form["cholesterol"])
+    survey = {}
+    #print(request.form)
+    #x = request.form.split("=")
+    #print(x[0])
+    data = request.form
+    #print(data.get('age'))
+    age = data.get('age')
+    gender = data.get('Gender')
+    s_blood_pressure = data.get('Sys blood pressure')
+    d_blood_pressure = data.get('Dia blood pressure')
+    glucose = data.get('glucose')
+    smoking = data.get('Smoking')
+    bmi = data.get('BMI')
+    cholesterol = data.get("Cholesterol")
+    survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
     #prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     #output = round(prediction[0], 2) 
-    return render_template('result.html', prediction_text= f'{age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol}')
+    return jsonify(survey)
     
 
 if __name__ == "__main__":
