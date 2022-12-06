@@ -51,51 +51,7 @@
   </nav>
 
 </head>
-  
 <body>
-    <div class="login">
-        <h2>Stroke Severity Prediction</h2>
-        <form action="{{/prediction}}" method=”post”>
-            <p>What is the patient's age?</p>
-            <input type="text" name="age" placeholder="Age" required="required"/>
-            <br>
-            <p>What is the patient's sex?</p>
-            <input type="radio" id="male" name="Gender" value="0" required="required">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="Gender" value="1" required="required">
-            <label for="female">Female</label>
-            <br>
-            <p>What is the patient's systolic blood pressure? (top number)</p>
-            <input type="text" name="Sys blood pressure" placeholder="Systolic Blood Pressure" required="required"/>
-            <br>
-            <p>What is the patient's diastolic  blood pressure? (bottom number)</p>
-            <input type="text" name="Dia blood pressure" placeholder="Diastolic Blood Pressure" required="required"/>
-            <br>
-            <p>What is the patient's glucose level?</p>
-            <input type="text" name="glucose" placeholder="Glucose" required="required"/>
-            <br>
-            <p>Does the patient smoke?</p>
-            <input type="radio" id="nonsmoker" name="Smoking" value="0" required="required">
-            <label for="nonsmoker">Nonsmoker</label>
-            <input type="radio" id="former smoker" name="Smoking" value="1" required="required">
-            <label for="former smoker">Former Smoker</label>
-            <input type="radio" id="current smoker" name="Smoking" value="2" required="required">
-            <label for="current smoker">Current Smoker</label> 
-            <br>
-            <p>What is the patient's BMI?</p>
-            <input type="text" name="bmi" placeholder="BMI" required="required"/>
-            <br>
-            <p>What is the patient's cholesterol level?</p>
-            <input type="text" name="cholesterol" placeholder="Cholesterol" required="required"/>
-            <br>
-            <br>
-            <a href = "/prediction">
-              <button type="submit" class="btn btn-primary btn-block btn-large">Next</button>
-            </a>
-            <br>
-        </form>
-        <!--<b>{{ prediction_text }}</b>-->
-    </div>
-
+    <b>{{ prediction_text }}</b>
 </body>
 </html>

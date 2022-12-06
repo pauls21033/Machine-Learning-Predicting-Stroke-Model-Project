@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 from sqlalchemy.ext.automap import automap_base
-from sqlalchemy import create_engine, func
+from sqlalchemy import create_engine
 import os
 import pickle
 
@@ -17,15 +17,17 @@ stroke_db = Base.classes.stroke_analysis
 app = Flask(__name__)
 model = pickle.load(open('ML_Test.pkl', 'rb')) 
 
-@app.route("/index.html")
+@app.route("/")
 def home():
     return render_template('index.html')
 
-@app.route("/data.html")
+@app.route("/data")
 def data():
     return render_template('data.html')
 
-@app.route('/prediction.html',methods=['POST'])
+
+#,methods=['POST']
+@app.route('/prediction',methods=['POST'])
 def predict():
     age = int(request.form["Age"])
     gender = int(request.form["Gender"])
@@ -38,7 +40,13 @@ def predict():
     prediction = model.predict([[age, gender, blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     output = round(prediction[0], 2) 
 
-    return render_template('prediction.html', prediction_text=f'{age}, {gender}, {blood_pressure}, {glucose} , {smoking}, {bmi}, {cholesterol} : {output}')    
+    return render_template('prediction.html', prediction_text=f'{output}')  
+
+#@app.route("/result")  
+#def result():
+ #   prediction = model.predict([[age, gender, blood_pressure, glucose, smoking, bmi, cholesterol]]) 
+  #  output = round(prediction[0], 2) 
+   # return render_template('result.html', prediction_text= f'{output}')
     
 
 if __name__ == "__main__":
