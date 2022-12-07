@@ -21,6 +21,15 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  img {
+    width:100%;
+    height:100%;
+  }
+
+  .vizualizations {
+    width:50%;
+    height:50%;
+  }
 
 
 @media(max-width: 992px) {
