@@ -64,10 +64,10 @@ def result():
     bmi = data.get('bmi')
     cholesterol = data.get("cholesterol")
     model = pickle.load(open('Model.pkl', 'rb')) 
-    survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
+    #survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
     prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
-    output = round(prediction[0], 2) 
-    return render_template('result.html', prediction_text=f'you are at a risk for a {output} stroke')
+    
+    return render_template('result.html', prediction_text=f'you are at a risk for a level {prediction[0]} stroke')
 
 @app.route('/api/prediction',methods=['POST'])
 def prediction():
