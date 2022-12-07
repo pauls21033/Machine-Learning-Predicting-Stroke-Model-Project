@@ -15,7 +15,7 @@ Base.prepare(engine, reflect=True)
 stroke_db = Base.classes.stroke_analysis
 
 app = Flask(__name__)
-model = pickle.load(open('ML_Test.pkl', 'rb')) 
+model = pickle.load(open('Model.pkl', 'rb')) 
 
 @app.route("/")
 def home():
@@ -63,10 +63,11 @@ def result():
     smoking = data.get('Smoking')
     bmi = data.get('bmi')
     cholesterol = data.get("cholesterol")
+    model = pickle.load(open('Model.pkl', 'rb')) 
     survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
     prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
     output = round(prediction[0], 2) 
-    return jsonify(output)
+    return render_template('result.html', prediction_text=f'you are at a risk for a {output} stroke')
 
 @app.route('/api/prediction',methods=['POST'])
 def prediction():
