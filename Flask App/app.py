@@ -25,6 +25,10 @@ def home():
 def data():
     return render_template('data.html')
 
+@app.route("/visualizations")
+def vis():
+    return render_template('Images.html')
+
 
 #,methods=['POST']
 @app.route('/prediction')
