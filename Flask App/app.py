@@ -25,6 +25,10 @@ def home():
 def data():
     return render_template('data.html')
 
+@app.route("/visualizations")
+def vis():
+    return render_template('Images.html')
+
 
 #,methods=['POST']
 @app.route('/prediction')
@@ -60,9 +64,9 @@ def result():
     bmi = data.get('bmi')
     cholesterol = data.get("cholesterol")
     survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
-    #prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
-    #output = round(prediction[0], 2) 
-    return jsonify(survey)
+    prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
+    output = round(prediction[0], 2) 
+    return jsonify(output)
 
 @app.route('/api/prediction',methods=['POST'])
 def prediction():
