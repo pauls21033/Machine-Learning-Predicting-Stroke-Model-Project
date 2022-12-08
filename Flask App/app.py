@@ -57,7 +57,7 @@ def result():
     model = pickle.load(open('Model.pkl', 'rb')) 
     survey = {"age": age, "gender": gender, "s_blood_pressure": s_blood_pressure, "d_blood_pressure": d_blood_pressure, "glucose": glucose, "smoking": smoking, "bmi": bmi, "cholesterol": cholesterol}
     prediction = model.predict([[age, gender, s_blood_pressure,d_blood_pressure, glucose, smoking, bmi, cholesterol]]) 
-    return render_template('result.html', prediction_text = f'The patient is at risk for a level {prediction} stroke')
+    return render_template('result.html', prediction_text = f'The patient is at risk for a level {prediction} stroke. Click `prediction` at the top of the page  to try again.')
     #return render_template('result.html', prediction_text=f'you are at a risk for a {output} stroke')
 
 if __name__ == "__main__":
